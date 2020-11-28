@@ -16,13 +16,15 @@ struct TopMoviePreview: View {
     }
     
     var body: some View {
-        ZStack(alignment: .bottom) {
+        ZStack {
             KFImage(movie.thumbnailUrl)
                 .resizable()
                 .scaledToFill()
                 .clipped()
             
             VStack(spacing: 8) {
+                Spacer()
+                
                 HStack {
                     ForEach(movie.categories, id: \.self) { category in
                         HStack {
@@ -58,6 +60,10 @@ struct TopMoviePreview: View {
                     Spacer()
                 }
             }
+            .background(
+                LinearGradient.blackOpacityGradient
+                .padding(.top, 250) // The end position of gradient is still same
+            )
         }
         .foregroundColor(.white)
     }
