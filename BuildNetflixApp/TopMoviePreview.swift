@@ -62,7 +62,7 @@ struct TopMoviePreview: View {
             }
             .background(
                 LinearGradient.blackOpacityGradient
-                .padding(.top, 250) // The end position of gradient is still same
+                    .padding(.top, 250) // The end position of gradient is still same
             )
         }
         .foregroundColor(.white)
