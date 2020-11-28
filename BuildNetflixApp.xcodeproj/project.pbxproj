@@ -19,6 +19,7 @@
 		BE4B9A3825726556007BAAFD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B9A3725726556007BAAFD /* HomeViewModel.swift */; };
 		BE4B9A3B25728714007BAAFD /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B9A3A25728714007BAAFD /* TopMoviePreview.swift */; };
 		BE6B8AE925728B820000B901 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B8AE825728B820000B901 /* SmallVerticalButton.swift */; };
+		BED7279725729FB500DDF609 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7279625729FB500DDF609 /* WhiteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		BE4B9A3725726556007BAAFD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BE4B9A3A25728714007BAAFD /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		BE6B8AE825728B820000B901 /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
+		BED7279625729FB500DDF609 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				BE215ED125725CA400BDF01D /* Preview Content */,
 				BE4B9A2725725D1A007BAAFD /* HomeView.swift */,
 				BE4B9A3725726556007BAAFD /* HomeViewModel.swift */,
+				BED7279625729FB500DDF609 /* WhiteButton.swift */,
 				BE4B9A3A25728714007BAAFD /* TopMoviePreview.swift */,
 				BE6B8AE825728B820000B901 /* SmallVerticalButton.swift */,
 				BE4B9A3125726377007BAAFD /* StandardHomeMovie.swift */,
@@ -176,6 +179,7 @@
 				BE4B9A2F2572632D007BAAFD /* Movie.swift in Sources */,
 				BE215ECC25725CA200BDF01D /* BuildNetflixAppApp.swift in Sources */,
 				BE6B8AE925728B820000B901 /* SmallVerticalButton.swift in Sources */,
+				BED7279725729FB500DDF609 /* WhiteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

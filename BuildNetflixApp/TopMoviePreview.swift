@@ -22,7 +22,7 @@ struct TopMoviePreview: View {
                 .scaledToFill()
                 .clipped()
             
-            VStack {
+            VStack(spacing: 8) {
                 HStack {
                     ForEach(movie.categories, id: \.self) { category in
                         HStack {
@@ -37,9 +37,25 @@ struct TopMoviePreview: View {
                     }
                 }
                 HStack {
-                    Text("My List")
-                    Text("Play button")
-                    Text("Info button")
+                    Spacer()
+                    
+                    SmallVerticalButton(text: "My List", isOnImage: "checkmark", isOffImage: "plus", isOn: true) {
+                        //
+                    }
+                    
+                    Spacer()
+                    
+                    WhiteButton(image: "play.fill", text: "Play") {
+                        //
+                    }
+                    .frame(width: 120)
+                    
+                    Spacer()
+                    
+                    SmallVerticalButton(text: "Info", isOnImage: "info.circle", isOffImage: "info.circle", isOn: true) {
+                        //
+                    }
+                    Spacer()
                 }
             }
         }

@@ -4,6 +4,8 @@ struct HomeView: View {
     
     let viewModel = HomeViewModel()
     
+    let screen = UIScreen.main.bounds
+    
     var body: some View {
         ZStack {
             Color.black
@@ -11,6 +13,11 @@ struct HomeView: View {
             
             ScrollView(showsIndicators: false) {
                 LazyVStack {
+                    
+                    TopMoviePreview(movie: exampleMovie5)
+                        .frame(width: screen.width)
+                        .padding(.top, screen.width / -5)
+                    
                     ForEach(viewModel.allCategories, id: \.self) { category in
                         HStack {
                             Text(category)
