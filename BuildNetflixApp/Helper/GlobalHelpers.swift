@@ -114,6 +114,45 @@ var moreExampleMovies: [Movie] {
 let exampleEpisodeInfo1 = CurrentEpisodeInfo(episodeName: "第1話鬼騙し編　其の壱", description: "昭和五十八年の六月。雛見沢に引っ越してきた圭一は、村に住むレナたちとの新しい生活を楽しんでいた。そんな六月のある日、圭一はダム工事現場の跡地で、偶然出会った写真家の富竹から不穏な話を聞かされる。"
                                              , season: 1, episode: 1)
 
+let episode1 = Episode(name: "第1話鬼騙し編　其の壱",
+                       season: 1,
+                       episodeNumber: 1,
+                       thumbnailImageUrlString: "https://cs1.anime.dmkt-sp.jp/anime_kv/img/24/25/1/0/01/24251001_1_9_8b.png?1601278266000",
+                       description: "昭和五十八年の六月。雛見沢に引っ越してきた圭一は、村に住むレナたちとの新しい生活を楽しんでいた。そんな六月のある日、圭一はダム工事現場の跡地で、偶然出会った写真家の富竹から不穏な話を聞かされる。",
+                       length: 24,
+                       videoUrl: exampleVideoURL)
+let episode2 = Episode(name: "第2話鬼騙し編　其の弐",
+                       season: 1,
+                       episodeNumber: 2,
+                       thumbnailImageUrlString: "https://cs1.anime.dmkt-sp.jp/anime_kv/img/24/25/1/0/02/24251002_1_9_8b.png?1601870510000",
+                       description: "かつて雛見沢村で起こったダム工事にまつわるバラバラ殺人事件のことを知った圭一は、その日以来、まるで自分を見張るようなレナの視線に気づき、得体の知れない恐怖に苛まれるようになる。",
+                       length: 24,
+                       videoUrl: exampleVideoURL)
+let episode3 = Episode(name: "第3話鬼騙し編　其の参",
+                       season: 1,
+                       episodeNumber: 3,
+                       thumbnailImageUrlString: "https://cs1.anime.dmkt-sp.jp/anime_kv/img/24/25/1/0/03/24251003_1_9_8b.png?1602567009000",
+                       description: "綿流しの演舞が終わり、圭一はレナに連れられて沢に降りる。村の守り神・オヤシロさまへの感謝を口にするレナに倣って、圭一も綿を流す。その翌日、圭一の元に大石と名乗る刑事がやってくるのだが…。",
+                       length: 24,
+                       videoUrl: exampleVideoURL)
+let episode4 = Episode(name: "第3話鬼騙し編　其の参",
+                       season: 2,
+                       episodeNumber: 1,
+                       thumbnailImageUrlString: "https://cs1.anime.dmkt-sp.jp/anime_kv/img/24/25/1/0/03/24251003_1_9_8b.png?1602567009000",
+                       description: "綿流しの演舞が終わり、圭一はレナに連れられて沢に降りる。村の守り神・オヤシロさまへの感謝を口にするレナに倣って、圭一も綿を流す。その翌日、圭一の元に大石と名乗る刑事がやってくるのだが…。",
+                       length: 24,
+                       videoUrl: exampleVideoURL)
+let episode5 = Episode(name: "第3話鬼騙し編　其の参",
+                       season: 2,
+                       episodeNumber: 2,
+                       thumbnailImageUrlString: "https://cs1.anime.dmkt-sp.jp/anime_kv/img/24/25/1/0/03/24251003_1_9_8b.png?1602567009000",
+                       description: "綿流しの演舞が終わり、圭一はレナに連れられて沢に降りる。村の守り神・オヤシロさまへの感謝を口にするレナに倣って、圭一も綿を流す。その翌日、圭一の元に大石と名乗る刑事がやってくるのだが…。",
+                       length: 24,
+                       videoUrl: exampleVideoURL)
+
+let allExampleEpisodes = [episode1, episode2, episode3, episode4, episode5]
+
+
 
 extension LinearGradient {
     static let blackOpacityGradient = LinearGradient(
