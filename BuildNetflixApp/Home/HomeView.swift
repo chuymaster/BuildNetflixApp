@@ -6,6 +6,8 @@ struct HomeView: View {
     
     let screen = UIScreen.main.bounds
     
+    @State private var movieDetailToShow: Movie? = nil
+    
     var body: some View {
         ZStack {
             Color.black
@@ -34,12 +36,22 @@ struct HomeView: View {
                                     StandardHomeMovie(movie: movie)
                                         .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                                         .padding(.horizontal, 20)
+                                        .onTapGesture {
+                                            movieDetailToShow = movie
+                                        }
                                 }
                             }
                         }
                     }
                 }
                 .foregroundColor(.white)
+            }
+            
+            // Overlay
+            if let movieDetailToShow = movieDetailToShow {
+                MovieDetailView(movie: movieDetailToShow, movieDetailToShow: $movieDetailToShow)
+                    .animation(.easeInOut)
+                    .transition(.opacity)
             }
         }
     }

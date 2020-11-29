@@ -137,9 +137,9 @@
 			children = (
 				BE967915257373AA00E5543F /* MovieDetailView.swift */,
 				BE08658B257385EB00173040 /* CustomTabSwitcher.swift */,
-				BEEBA8BA25739415006FEB76 /* MoreLikeThisView.swift */,
-				BE33D8A62573974B00B62A28 /* TrailersListView.swift */,
 				BE33D8B52573A6EF00B62A28 /* EpisodesView.swift */,
+				BE33D8A62573974B00B62A28 /* TrailersListView.swift */,
+				BEEBA8BA25739415006FEB76 /* MoreLikeThisView.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
