@@ -37,7 +37,7 @@ let exampleMovie1 = Movie(
 let exampleMovie2 = Movie(
     id: UUID().uuidString,
     name: "Travelers",
-    thumbnailUrl: URL(string: "https://picsum.photos/200/300")!,
+    thumbnailUrl: URL(string: "https://picsum.photos/200/301")!,
     categories: exampleCategories,
     year: 2020,
     rating: "TV-MA",
@@ -52,7 +52,7 @@ let exampleMovie2 = Movie(
 let exampleMovie3 = Movie(
     id: UUID().uuidString,
     name: "Community",
-    thumbnailUrl: URL(string: "https://picsum.photos/200/300")!,
+    thumbnailUrl: URL(string: "https://picsum.photos/200/302")!,
     categories: exampleCategories,
     year: 2020,
     rating: "TV-MA",
@@ -66,7 +66,7 @@ let exampleMovie3 = Movie(
 let exampleMovie4 = Movie(
     id: UUID().uuidString,
     name: "Python",
-    thumbnailUrl: URL(string: "https://picsum.photos/200/300")!,
+    thumbnailUrl: URL(string: "https://picsum.photos/200/303")!,
     categories: exampleCategories,
     year: 2020,
     rating: "TV-MA",
@@ -79,7 +79,7 @@ let exampleMovie4 = Movie(
 let exampleMovie5 = Movie(
     id: UUID().uuidString,
     name: "Love Swift",
-    thumbnailUrl: URL(string: "https://picsum.photos/200/300")!,
+    thumbnailUrl: URL(string: "https://picsum.photos/200/304")!,
     categories: exampleCategories,
     year: 2020,
     rating: "TV-MA",
@@ -92,7 +92,7 @@ let exampleMovie5 = Movie(
 let exampleMovie6 = Movie(
     id: UUID().uuidString,
     name: "Hate Apple",
-    thumbnailUrl: URL(string: "https://picsum.photos/200/300")!,
+    thumbnailUrl: URL(string: "https://picsum.photos/200/305")!,
     categories: exampleCategories,
     year: 2020,
     rating: "TV-MA",

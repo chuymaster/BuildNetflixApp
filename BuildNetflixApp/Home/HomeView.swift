@@ -2,7 +2,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    let viewModel = HomeViewModel()
+    @StateObject var viewModel = HomeViewModel()
     
     let screen = UIScreen.main.bounds
     
@@ -32,26 +32,9 @@ struct HomeView: View {
                         .padding(.top, screen.width / -3)
                         .zIndex(-1)
                     
-                    ForEach(viewModel.allCategories, id: \.self) { category in
-                        HStack {
-                            Text(category)
-                                .font(.title3)
-                                .bold()
-                            Spacer()
-                        }
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            LazyHStack {
-                                ForEach(viewModel.getMovie(forCategory: category)) { movie in
-                                    StandardHomeMovie(movie: movie)
-                                        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: 200, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-                                        .padding(.horizontal, 20)
-                                        .onTapGesture {
-                                            movieDetailToShow = movie
-                                        }
-                                }
-                            }
-                        }
-                    }
+                    HomeStack(viewModel: viewModel,
+                              topRowSelection: topRowSelection, // No need to pass binding because of 1-way change
+                              movieDetailToShow: $movieDetailToShow)
                 }
                 .foregroundColor(.white)
             }

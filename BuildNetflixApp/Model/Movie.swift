@@ -53,6 +53,10 @@ struct Movie: Identifiable {
             return defaultEpisodeInfo.description
         }
     }
+    
+    var movieType: MovieType {
+        return episodes == nil ? .movie : .tvShow
+    }
 }
 
 struct CurrentEpisodeInfo: Hashable, Equatable {
@@ -60,4 +64,9 @@ struct CurrentEpisodeInfo: Hashable, Equatable {
     var description: String
     var season: Int
     var episode: Int
+}
+
+enum MovieType {
+    case movie
+    case tvShow
 }
