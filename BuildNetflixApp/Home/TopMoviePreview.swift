@@ -47,7 +47,7 @@ struct TopMoviePreview: View {
                     
                     Spacer()
                     
-                    WhiteButton(image: "play.fill", text: "Play") {
+                    PlayButton(image: "play.fill", text: "Play") {
                         //
                     }
                     .frame(width: 120)
