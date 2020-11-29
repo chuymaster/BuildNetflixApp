@@ -19,6 +19,7 @@
 		BE4B9A3825726556007BAAFD /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B9A3725726556007BAAFD /* HomeViewModel.swift */; };
 		BE4B9A3B25728714007BAAFD /* TopMoviePreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B9A3A25728714007BAAFD /* TopMoviePreview.swift */; };
 		BE6B8AE925728B820000B901 /* SmallVerticalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B8AE825728B820000B901 /* SmallVerticalButton.swift */; };
+		BE882C1625737CCB00C1127C /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE882C1525737CCB00C1127C /* Episode.swift */; };
 		BE967916257373AA00E5543F /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE967915257373AA00E5543F /* MovieDetailView.swift */; };
 		BED7279725729FB500DDF609 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED7279625729FB500DDF609 /* WhiteButton.swift */; };
 /* End PBXBuildFile section */
@@ -37,6 +38,7 @@
 		BE4B9A3725726556007BAAFD /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BE4B9A3A25728714007BAAFD /* TopMoviePreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopMoviePreview.swift; sourceTree = "<group>"; };
 		BE6B8AE825728B820000B901 /* SmallVerticalButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallVerticalButton.swift; sourceTree = "<group>"; };
+		BE882C1525737CCB00C1127C /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		BE967915257373AA00E5543F /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		BED7279625729FB500DDF609 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				BE4B9A2E2572632D007BAAFD /* Movie.swift */,
+				BE882C1525737CCB00C1127C /* Episode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE4B9A35257263CB007BAAFD /* GlobalHelpers.swift in Sources */,
+				BE882C1625737CCB00C1127C /* Episode.swift in Sources */,
 				BE4B9A2825725D1A007BAAFD /* HomeView.swift in Sources */,
 				BE4B9A3825726556007BAAFD /* HomeViewModel.swift in Sources */,
 				BE215ECE25725CA200BDF01D /* ContentView.swift in Sources */,

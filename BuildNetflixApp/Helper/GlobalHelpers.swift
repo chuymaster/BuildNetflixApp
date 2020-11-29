@@ -5,27 +5,33 @@ let exampleCategories = ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"]
 
 let exampleMovie1 = Movie(id: UUID().uuidString,
                           name: "Hello, World",
-                          thumbnailUrl: URL(string: "https://picsum.photos/200/300")!, categories: exampleCategories)
+                          thumbnailUrl: URL(string: "https://picsum.photos/200/300")!, categories: exampleCategories, year: 2020, rating: "TV-MA",
+                          numberOfSeasons: 2, episodes: [])
 
 let exampleMovie2 = Movie(id: UUID().uuidString,
                           name: "Travelers",
-                          thumbnailUrl: URL(string: "https://picsum.photos/200/300")!, categories: exampleCategories)
+                          thumbnailUrl: URL(string: "https://picsum.photos/200/300")!, categories: exampleCategories, year: 2020, rating: "TV-MA",
+                          numberOfSeasons: 3, promotionHeadline: "New episodes coming soon")
 
 let exampleMovie3 = Movie(id: UUID().uuidString,
                           name: "Community",
-                          thumbnailUrl: URL(string: "https://picsum.photos/200/300")!, categories: exampleCategories)
+                          thumbnailUrl: URL(string: "https://picsum.photos/200/300")!, categories: exampleCategories, year: 2020, rating: "TV-MA",
+                          numberOfSeasons: 3)
 
 let exampleMovie4 = Movie(id: UUID().uuidString,
                           name: "Python",
-                          thumbnailUrl: URL(string: "https://picsum.photos/200/300")!, categories: exampleCategories)
+                          thumbnailUrl: URL(string: "https://picsum.photos/200/300")!, categories: exampleCategories, year: 2020, rating: "TV-MA",
+                          numberOfSeasons: 3)
 
 let exampleMovie5 = Movie(id: UUID().uuidString,
                           name: "Love Swift",
-                          thumbnailUrl: URL(string: "https://picsum.photos/200/300")!, categories: exampleCategories)
+                          thumbnailUrl: URL(string: "https://picsum.photos/200/300")!, categories: exampleCategories, year: 2020, rating: "TV-MA",
+                          numberOfSeasons: 3)
 
 let exampleMovie6 = Movie(id: UUID().uuidString,
                           name: "Hate Apple",
-                          thumbnailUrl: URL(string: "https://picsum.photos/200/300")!, categories: exampleCategories)
+                          thumbnailUrl: URL(string: "https://picsum.photos/200/300")!, categories: exampleCategories, year: 2020, rating: "TV-MA",
+                          numberOfSeasons: 6, promotionHeadline: "Watch Season 6 Now")
 
 let exampleMovies: [Movie] = [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
 

@@ -28,6 +28,12 @@ struct MovieDetailView: View {
                             .frame(width: screen.width / 2.5)
                         
                         MovieInfoSubheadline(movie: movie)
+                        
+                        if let headline = movie.promotionHeadline {
+                            Text(headline)
+                                .bold()
+                                .font(.headline)
+                        }
                     }
                 }
                 
@@ -40,7 +46,7 @@ struct MovieDetailView: View {
 
 struct MovieDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieDetailView(movie: exampleMovie1)
+        MovieDetailView(movie: exampleMovie6)
     }
 }
 
@@ -49,17 +55,35 @@ struct MovieInfoSubheadline: View {
     var movie: Movie
     
     var body: some View {
-        HStack {
+        HStack(spacing: 20) {
             Image(systemName: "hand.thumbsup.fill")
                 .foregroundColor(.white)
             
-            Text("MOVIE YEAR")
+            Text(String(movie.year))
             
-            Text("RATING")
+            RatingView(rating: movie.rating)
             
-            Text("SEASONS")
+            Text(movie.numberOfSeasonsDisplay)
         }
         .foregroundColor(.gray)
         .padding(.vertical, 6)
+    }
+}
+
+struct RatingView: View {
+    
+    var rating: String
+    
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .foregroundColor(.gray)
+            
+            Text(rating)
+                .foregroundColor(.white)
+                .font(.system(size: 12))
+                .bold()
+        }
+        .frame(width: 50, height: 20, alignment: .center)
     }
 }
