@@ -14,6 +14,7 @@ let exampleMovie1 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators:"©2020竜騎士07／ひぐらしのなく頃に製作委員会",
     cast: "前原圭一:保志総一朗／竜宮レナ:中原麻衣／園崎魅音・詩音:ゆきのさつき／北条沙都子:かないみか／古手梨花:田村ゆかり／大石蔵人:茶風林／富竹ジロウ:大川 透／鷹野三四:伊藤美紀／入江京介:関 俊彦",
+    moreLikeThisMovies: moreExampleMovies,
     episodes: [])
 
 let exampleMovie2 = Movie(
@@ -27,6 +28,7 @@ let exampleMovie2 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators:"©2020竜騎士07／ひぐらしのなく頃に製作委員会",
     cast: "前原圭一:保志総一朗／竜宮レナ:中原麻衣／園崎魅音・詩音:ゆきのさつき／北条沙都子:かないみか／古手梨花:田村ゆかり／大石蔵人:茶風林／富竹ジロウ:大川 透／鷹野三四:伊藤美紀／入江京介:関 俊彦",
+    moreLikeThisMovies: [],
     promotionHeadline: "New episodes coming soon")
 
 let exampleMovie3 = Movie(
@@ -39,7 +41,8 @@ let exampleMovie3 = Movie(
     numberOfSeasons: 3,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators:"©2020竜騎士07／ひぐらしのなく頃に製作委員会",
-    cast: "前原圭一:保志総一朗／竜宮レナ:中原麻衣／園崎魅音・詩音:ゆきのさつき／北条沙都子:かないみか／古手梨花:田村ゆかり／大石蔵人:茶風林／富竹ジロウ:大川 透／鷹野三四:伊藤美紀／入江京介:関 俊彦")
+    cast: "前原圭一:保志総一朗／竜宮レナ:中原麻衣／園崎魅音・詩音:ゆきのさつき／北条沙都子:かないみか／古手梨花:田村ゆかり／大石蔵人:茶風林／富竹ジロウ:大川 透／鷹野三四:伊藤美紀／入江京介:関 俊彦",
+    moreLikeThisMovies: [])
 
 let exampleMovie4 = Movie(
     id: UUID().uuidString,
@@ -50,7 +53,8 @@ let exampleMovie4 = Movie(
     rating: "TV-MA",
     numberOfSeasons: 3, defaultEpisodeInfo: exampleEpisodeInfo1,
     creators:"©2020竜騎士07／ひぐらしのなく頃に製作委員会",
-    cast: "前原圭一:保志総一朗／竜宮レナ:中原麻衣／園崎魅音・詩音:ゆきのさつき／北条沙都子:かないみか／古手梨花:田村ゆかり／大石蔵人:茶風林／富竹ジロウ:大川 透／鷹野三四:伊藤美紀／入江京介:関 俊彦")
+    cast: "前原圭一:保志総一朗／竜宮レナ:中原麻衣／園崎魅音・詩音:ゆきのさつき／北条沙都子:かないみか／古手梨花:田村ゆかり／大石蔵人:茶風林／富竹ジロウ:大川 透／鷹野三四:伊藤美紀／入江京介:関 俊彦",
+    moreLikeThisMovies: [])
 
 let exampleMovie5 = Movie(
     id: UUID().uuidString,
@@ -61,7 +65,8 @@ let exampleMovie5 = Movie(
     rating: "TV-MA",
     numberOfSeasons: 3, defaultEpisodeInfo: exampleEpisodeInfo1,
     creators:"©2020竜騎士07／ひぐらしのなく頃に製作委員会",
-    cast: "前原圭一:保志総一朗／竜宮レナ:中原麻衣／園崎魅音・詩音:ゆきのさつき／北条沙都子:かないみか／古手梨花:田村ゆかり／大石蔵人:茶風林／富竹ジロウ:大川 透／鷹野三四:伊藤美紀／入江京介:関 俊彦")
+    cast: "前原圭一:保志総一朗／竜宮レナ:中原麻衣／園崎魅音・詩音:ゆきのさつき／北条沙都子:かないみか／古手梨花:田村ゆかり／大石蔵人:茶風林／富竹ジロウ:大川 透／鷹野三四:伊藤美紀／入江京介:関 俊彦",
+    moreLikeThisMovies: [])
 
 let exampleMovie6 = Movie(
     id: UUID().uuidString,
@@ -74,9 +79,16 @@ let exampleMovie6 = Movie(
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators:"©2020竜騎士07／ひぐらしのなく頃に製作委員会",
     cast: "前原圭一:保志総一朗／竜宮レナ:中原麻衣／園崎魅音・詩音:ゆきのさつき／北条沙都子:かないみか／古手梨花:田村ゆかり／大石蔵人:茶風林／富竹ジロウ:大川 透／鷹野三四:伊藤美紀／入江京介:関 俊彦",
-    promotionHeadline: "Watch Season 6 Now")
+    moreLikeThisMovies: [],
+    promotionHeadline: "Watch Season 6 Now")    
 
-let exampleMovies: [Movie] = [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
+var exampleMovies: [Movie] {
+    [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
+}
+
+var moreExampleMovies: [Movie] {
+    [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
+}
 let exampleEpisodeInfo1 = CurrentEpisodeInfo(episodeName: "第1話鬼騙し編　其の壱", description: "昭和五十八年の六月。雛見沢に引っ越してきた圭一は、村に住むレナたちとの新しい生活を楽しんでいた。そんな六月のある日、圭一はダム工事現場の跡地で、偶然出会った写真家の富竹から不穏な話を聞かされる。"
                                              , season: 1, episode: 1)
 

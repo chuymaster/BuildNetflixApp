@@ -59,7 +59,7 @@ struct MovieDetailView: View {
                         }
                         .padding(.leading, 20)
                       
-                        CustomTabSwitcher(tabs: CustomTab.allCases)
+                        CustomTabSwitcher(tabs: CustomTab.allCases, movie: movie)
                     }
                     .padding(.horizontal, 10)
                 }
