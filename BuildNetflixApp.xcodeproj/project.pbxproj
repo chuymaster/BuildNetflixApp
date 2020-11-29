@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE08658C257385EB00173040 /* CustomTabSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE08658B257385EB00173040 /* CustomTabSwitcher.swift */; };
 		BE215ECC25725CA200BDF01D /* BuildNetflixAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE215ECB25725CA200BDF01D /* BuildNetflixAppApp.swift */; };
 		BE215ECE25725CA200BDF01D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE215ECD25725CA200BDF01D /* ContentView.swift */; };
 		BE215ED025725CA400BDF01D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE215ECF25725CA400BDF01D /* Assets.xcassets */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE08658B257385EB00173040 /* CustomTabSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabSwitcher.swift; sourceTree = "<group>"; };
 		BE215EC825725CA200BDF01D /* BuildNetflixApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BuildNetflixApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE215ECB25725CA200BDF01D /* BuildNetflixAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildNetflixAppApp.swift; sourceTree = "<group>"; };
 		BE215ECD25725CA200BDF01D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				BE967915257373AA00E5543F /* MovieDetailView.swift */,
+				BE08658B257385EB00173040 /* CustomTabSwitcher.swift */,
 			);
 			path = MovieDetail;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 				BE4B9A3B25728714007BAAFD /* TopMoviePreview.swift in Sources */,
 				BE4B9A2F2572632D007BAAFD /* Movie.swift in Sources */,
 				BE215ECC25725CA200BDF01D /* BuildNetflixAppApp.swift in Sources */,
+				BE08658C257385EB00173040 /* CustomTabSwitcher.swift in Sources */,
 				BE6B8AE925728B820000B901 /* SmallVerticalButton.swift in Sources */,
 				BED7279725729FB500DDF609 /* PlayButton.swift in Sources */,
 				BE967916257373AA00E5543F /* MovieDetailView.swift in Sources */,
