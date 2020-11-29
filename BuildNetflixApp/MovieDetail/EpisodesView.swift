@@ -1,10 +1,3 @@
-//
-//  EpisodesView.swift
-//  BuildNetflixApp
-//
-//  Created by CHATCHAI LOKNIYOM on 2020/11/29.
-//
-
 import SwiftUI
 
 struct EpisodesView: View {
@@ -18,14 +11,14 @@ struct EpisodesView: View {
     }
     
     var body: some View {
-        VStack {
+        VStack(spacing: 14) {
             //Season picker
             HStack {
                 Button(action: {
                     showSeasonPicker = true
                 }, label: {
                     Group {
-                        Text("Season 1")
+                        Text("Season \(selectedSeason)")
                         Image(systemName: "chevron.down")
                     }
                     .font(.system(size: 16))
@@ -38,12 +31,35 @@ struct EpisodesView: View {
             //Episode list
             
             ForEach(getEpisodes(forSeason: selectedSeason)) { episode in
-                Text("TEST")
+                VStack(alignment: .leading) {
+                    HStack {
+                        VideoPreviewImage(imageUrl: episode.thumbnailImageUrl,
+                                          videoUrl: episode.videoUrl)
+                            .frame(width: 120, height: 70)
+                            .clipped() // Clip overflow content outside frame
+                        
+                        VStack(alignment: .leading) {
+                            Text("\(episode.episodeNumber). \(episode.name)")
+                                .font(.system(size: 16))
+                            Text(String(episode.length) + "m")
+                                .font(.system(size: 12))
+                                .foregroundColor(.gray)
+                        }
+                        Spacer()
+                        Image(systemName: "arrow.down.to.line.alt")
+                            .font(.system(size: 20))
+                    }
+                    Text(episode.description)
+                        .font(.system(size: 13))
+                        .lineLimit(3)
+                }
+                .padding(.bottom, 20)
             }
             
             Spacer()
         }
         .foregroundColor(.white)
+        .padding(.horizontal, 20)
     }
 }
 

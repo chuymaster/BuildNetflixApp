@@ -31,7 +31,7 @@ let exampleMovie1 = Movie(
     creators:"©2020竜騎士07／ひぐらしのなく頃に製作委員会",
     cast: "前原圭一:保志総一朗／竜宮レナ:中原麻衣／園崎魅音・詩音:ゆきのさつき／北条沙都子:かないみか／古手梨花:田村ゆかり／大石蔵人:茶風林／富竹ジロウ:大川 透／鷹野三四:伊藤美紀／入江京介:関 俊彦",
     moreLikeThisMovies: moreExampleMovies,
-    episodes: [],
+    episodes: allExampleEpisodes,
     trailers: exampleTrailers)
 
 let exampleMovie2 = Movie(
