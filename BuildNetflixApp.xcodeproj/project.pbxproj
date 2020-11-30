@@ -18,6 +18,8 @@
 		BE33D8B12573984600B62A28 /* VideoPreviewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33D8B02573984600B62A28 /* VideoPreviewImage.swift */; };
 		BE33D8B62573A6EF00B62A28 /* EpisodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33D8B52573A6EF00B62A28 /* EpisodesView.swift */; };
 		BE33D8BA2573B7BF00B62A28 /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33D8B92573B7BF00B62A28 /* HomeStack.swift */; };
+		BE33D8BE2575180E00B62A28 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33D8BD2575180E00B62A28 /* SearchBar.swift */; };
+		BE33D8C22575190600B62A28 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE33D8C12575190600B62A28 /* Colors.swift */; };
 		BE4B9A2825725D1A007BAAFD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B9A2725725D1A007BAAFD /* HomeView.swift */; };
 		BE4B9A2C257260EA007BAAFD /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = BE4B9A2B257260EA007BAAFD /* KingfisherSwiftUI */; };
 		BE4B9A2F2572632D007BAAFD /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4B9A2E2572632D007BAAFD /* Movie.swift */; };
@@ -46,6 +48,8 @@
 		BE33D8B02573984600B62A28 /* VideoPreviewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPreviewImage.swift; sourceTree = "<group>"; };
 		BE33D8B52573A6EF00B62A28 /* EpisodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesView.swift; sourceTree = "<group>"; };
 		BE33D8B92573B7BF00B62A28 /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
+		BE33D8BD2575180E00B62A28 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		BE33D8C12575190600B62A28 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		BE4B9A2725725D1A007BAAFD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		BE4B9A2E2572632D007BAAFD /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		BE4B9A3125726377007BAAFD /* StandardHomeMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardHomeMovie.swift; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 		BE215ECA25725CA200BDF01D /* BuildNetflixApp */ = {
 			isa = PBXGroup;
 			children = (
+				BE33D8BC257517DC00B62A28 /* Search */,
 				BE33D8AF2573983600B62A28 /* VideoPlayer */,
 				BE96791A2573741600E5543F /* Helper */,
 				BE9679192573740D00E5543F /* Model */,
@@ -119,6 +124,14 @@
 				BE33D8B02573984600B62A28 /* VideoPreviewImage.swift */,
 			);
 			path = VideoPlayer;
+			sourceTree = "<group>";
+		};
+		BE33D8BC257517DC00B62A28 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				BE33D8BD2575180E00B62A28 /* SearchBar.swift */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		BE9679132573737800E5543F /* Home */ = {
@@ -161,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				BE4B9A34257263CB007BAAFD /* GlobalHelpers.swift */,
+				BE33D8C12575190600B62A28 /* Colors.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -241,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE33D8B62573A6EF00B62A28 /* EpisodesView.swift in Sources */,
+				BE33D8C22575190600B62A28 /* Colors.swift in Sources */,
 				BE33D8AD2573979000B62A28 /* SwiftUIVideoView.swift in Sources */,
 				BE4B9A35257263CB007BAAFD /* GlobalHelpers.swift in Sources */,
 				BE882C1625737CCB00C1127C /* Episode.swift in Sources */,
@@ -254,6 +269,7 @@
 				BE4B9A2F2572632D007BAAFD /* Movie.swift in Sources */,
 				BE215ECC25725CA200BDF01D /* BuildNetflixAppApp.swift in Sources */,
 				BE33D8BA2573B7BF00B62A28 /* HomeStack.swift in Sources */,
+				BE33D8BE2575180E00B62A28 /* SearchBar.swift in Sources */,
 				BE08658C257385EB00173040 /* CustomTabSwitcher.swift in Sources */,
 				BE33D8AA2573975500B62A28 /* Trailer.swift in Sources */,
 				BE33D8A72573974B00B62A28 /* TrailersListView.swift in Sources */,
