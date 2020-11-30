@@ -28,6 +28,7 @@ struct SearchBar: View {
                     .onTapGesture(perform: {
                         isEditing = true
                     })
+                    .animation(.default)
                 
                 if !text.isEmpty {
                     if isLoading {
@@ -70,6 +71,9 @@ struct SearchBar: View {
                     })
                     .foregroundColor(.white)
                     .padding(.trailing, 10)
+                    .transition(.move(edge: .trailing))
+                    .animation(.default)
+                    
                 }
                 
             }
