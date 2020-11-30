@@ -12,6 +12,8 @@ struct SearchView: View {
     @StateObject var viewModel = SearchViewModel()
     @State var searchText: String = ""
     
+    @State private var movieDetailToShow: Movie? = nil
+    
     var body: some View {
         
         // Custom binding to observe new text and call viewModel.update()
@@ -33,19 +35,24 @@ struct SearchView: View {
                 
                 ScrollView() {
                     if viewModel.isShowingPopularMovies {
-                        Text("Popular")
-                    } else {
-                        
+                        PopularList(movieDetailToShow: $movieDetailToShow,
+                                    movies: viewModel.popularMovies)
                     }
                     
                     if viewModel.viewState == .empty {
-                        Text("Empty")
+                        Text("Your search did not have any results")
+                            .bold()
+                            .padding(.top, 150)
                     } else if viewModel.viewState == .ready && !viewModel.isShowingPopularMovies {
                         Text("Search Result")
                     }
                 }
                 
                 Spacer()
+            }
+            
+            if movieDetailToShow != nil {
+                MovieDetailView(movie: movieDetailToShow!, movieDetailToShow: $movieDetailToShow)
             }
         }
         .foregroundColor(.white)
@@ -55,5 +62,29 @@ struct SearchView: View {
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {
         SearchView()
+    }
+}
+
+struct PopularList: View {
+    
+    @Binding var movieDetailToShow: Movie?
+    var movies: [Movie]
+    
+    var body: some View {
+        VStack {
+            HStack {
+                Text("Popular Searches")
+                    .bold()
+                    .font(.title3)
+                    .padding(.leading, 12)
+            }
+            
+            LazyVStack {
+                ForEach(movies, id: \.id) { movie in
+                    PopularMovieView(movieDetailToShow: $movieDetailToShow, movie: movie)
+                        .frame(height: 75)
+                }
+            }
+        }
     }
 }
