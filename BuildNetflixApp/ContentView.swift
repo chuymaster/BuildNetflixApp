@@ -34,7 +34,7 @@ struct ContentView: View {
                     }
                 }.tag(1)
             
-            Text("Coming Soon")
+            ComingSoonView()
                 .tabItem {
                     Group {
                         Image(systemName: "play.rectangle")
