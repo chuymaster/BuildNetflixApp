@@ -26,7 +26,7 @@ struct ContentView: View {
                     }
                 }.tag(0)
             
-            Text("Search")
+            SearchView()
                 .tabItem {
                     Group {
                         Image(systemName: "magnifyingglass")

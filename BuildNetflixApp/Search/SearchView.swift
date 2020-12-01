@@ -44,7 +44,19 @@ struct SearchView: View {
                             .bold()
                             .padding(.top, 150)
                     } else if viewModel.viewState == .ready && !viewModel.isShowingPopularMovies {
-                        Text("Search Result")
+                        
+                        VStack {
+                            HStack {
+                                Text("Movies & TV")
+                                    .bold()
+                                    .font(.title3)
+                                    .padding(.leading, 12)
+                                Spacer()
+                            }
+                            
+                            SearchResultsGrid(movies: viewModel.searchResults,
+                                              movieDetailToShow: $movieDetailToShow)
+                        }
                     }
                 }
                 
@@ -77,6 +89,7 @@ struct PopularList: View {
                     .bold()
                     .font(.title3)
                     .padding(.leading, 12)
+                Spacer()
             }
             
             LazyVStack {
