@@ -10,24 +10,26 @@ struct HomeStack: View {
     
     var body: some View {
         ForEach(viewModel.allCategories, id: \.self) { category in
-            HStack {
-                Text(category)
-                    .font(.title3)
-                    .bold()
-                Spacer()
-            }
-            ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack {
-                    ForEach(viewModel.getMovie(forCategory: category, andHomeRow: topRowSelection, andGenre: selectedGenre)) { movie in
-                        StandardHomeMovie(movie: movie)
-                            .frame(width: 100, height: 200)
-                            .padding(.horizontal, 20)
-                            .onTapGesture {
-                                movieDetailToShow = movie
-                            }
+            VStack {
+                HStack {
+                    Text(category)
+                        .font(.title3)
+                        .bold()
+                    Spacer()
+                }
+                ScrollView(.horizontal, showsIndicators: false) {
+                    LazyHStack {
+                        ForEach(viewModel.getMovie(forCategory: category, andHomeRow: topRowSelection, andGenre: selectedGenre)) { movie in
+                            StandardHomeMovie(movie: movie)
+                                .frame(width: 135, height: 200)
+                                .onTapGesture {
+                                    movieDetailToShow = movie
+                                }
+                        }
                     }
                 }
             }
+            .padding(.leading, 6)
         }
     }
 }
