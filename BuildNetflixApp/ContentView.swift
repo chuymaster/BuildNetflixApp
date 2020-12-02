@@ -42,7 +42,7 @@ struct ContentView: View {
                     }
                 }.tag(2)
             
-            Text("Downloads")
+            DownloadsView()
                 .tabItem {
                     Group {
                         Image(systemName: "arrow.down.to.line.alt")
