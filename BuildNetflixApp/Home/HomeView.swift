@@ -32,6 +32,8 @@ struct HomeView: View {
                         .padding(.top, screen.width / -3)
                         .zIndex(-1)
                     
+                    MoviePreviewRow(movies: exampleMovies)
+                    
                     HomeStack(viewModel: viewModel,
                               topRowSelection: topRowSelection,
                               selectedGenre: homeGenre, // No need to pass binding because of 1-way change

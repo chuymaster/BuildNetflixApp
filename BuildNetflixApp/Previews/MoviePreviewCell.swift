@@ -31,6 +31,7 @@ struct MoviePreviewCell_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color.black
+                .edgesIgnoringSafeArea(.all)
             MoviePreviewCell(movie: exampleMovie1)
                 .frame(width: 200, height: 65)
         }
