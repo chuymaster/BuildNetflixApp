@@ -25,7 +25,7 @@ struct PagerView<Content: View>: View {
             }
             .frame(width: geo.size.width, alignment: .leading)
             .offset(x: -CGFloat(currentIndex) * geo.size.width)
-            .offset(x: translation)
+            .offset(x: translation) // This appends offset upon the above (ex: 200 + 50)
             .animation(.interactiveSpring())
             .gesture(DragGesture()
                         .onChanged({ value in
