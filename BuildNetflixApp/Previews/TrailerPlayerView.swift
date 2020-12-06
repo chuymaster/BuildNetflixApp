@@ -18,6 +18,6 @@ struct TrailerPlayerView: View {
 
 struct TrailerPlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        TrailerPlayerView(videoUrl: nil, playVideo: .constant(true))
+        TrailerPlayerView(videoUrl: exampleVideoURL, playVideo: .constant(true))
     }
 }
