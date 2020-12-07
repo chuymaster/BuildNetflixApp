@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var showPreviewFullScreen = false
+    @State var previewStartingIndex: Int = 0
+    
+    @State private var previewCurrentPos: CGFloat = 1000
+    
     init() {
         // need to use UIKit
         UITabBar.appearance().isTranslucent = false
@@ -17,48 +22,74 @@ struct ContentView: View {
     
     var body: some View {
         
-        TabView {
-            HomeView()
-                .tabItem {
-                    Group {
-                        Image(systemName: "house")
-                        Text("Home")
-                    }
-                }.tag(0)
+        ZStack {
+            TabView {
+                HomeView(
+                    showPreviewFullScreen: $showPreviewFullScreen,
+                    previewStartingIndex: $previewStartingIndex)
+                    .tabItem {
+                        Group {
+                            Image(systemName: "house")
+                            Text("Home")
+                        }
+                    }.tag(0)
+                
+                SearchView()
+                    .tabItem {
+                        Group {
+                            Image(systemName: "magnifyingglass")
+                            Text("Search")
+                        }
+                    }.tag(1)
+                
+                ComingSoonView()
+                    .tabItem {
+                        Group {
+                            Image(systemName: "play.rectangle")
+                            Text("Coming Soon")
+                        }
+                    }.tag(2)
+                
+                DownloadsView()
+                    .tabItem {
+                        Group {
+                            Image(systemName: "arrow.down.to.line.alt")
+                            Text("Downloads")
+                        }
+                    }.tag(3)
+                
+                Text("More")
+                    .tabItem {
+                        Group {
+                            Image(systemName: "equal")
+                            Text("More")
+                        }
+                    }.tag(4)
+            }
+            .accentColor(.white)
             
-            SearchView()
-                .tabItem {
-                    Group {
-                        Image(systemName: "magnifyingglass")
-                        Text("Search")
-                    }
-                }.tag(1)
-            
-            ComingSoonView()
-                .tabItem {
-                    Group {
-                        Image(systemName: "play.rectangle")
-                        Text("Coming Soon")
-                    }
-                }.tag(2)
-            
-            DownloadsView()
-                .tabItem {
-                    Group {
-                        Image(systemName: "arrow.down.to.line.alt")
-                        Text("Downloads")
-                    }
-                }.tag(3)
-            
-            Text("More")
-                .tabItem {
-                    Group {
-                        Image(systemName: "equal")
-                        Text("More")
-                    }
-                }.tag(4)
+            PreviewList(
+                movies: exampleMovies,
+                currentSelection: $previewStartingIndex,
+                isVisible: $showPreviewFullScreen)
+                .offset(y: previewCurrentPos)
+                .isHidden(!showPreviewFullScreen)
+                .animation(.easeIn)
+                .transition(.move(edge: .bottom))
         }
-        .accentColor(.white)
+        .onChange(of: showPreviewFullScreen, perform: { value in
+            if value {
+                // show fullscreen
+                withAnimation {
+                    self.previewCurrentPos = .zero
+                }
+            } else {
+                // hide under screen height
+                withAnimation {
+                    self.previewCurrentPos = UIScreen.main.bounds.height + 20
+                }
+            }
+        })
     }
 }
 

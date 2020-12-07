@@ -14,6 +14,9 @@ struct HomeView: View {
     @State private var showGenreSelection = false
     @State private var showTopRowSelection = false
     
+    @Binding var showPreviewFullScreen: Bool
+    @Binding var previewStartingIndex: Int
+    
     var body: some View {
         ZStack {
             Color.black
@@ -31,12 +34,17 @@ struct HomeView: View {
                         .frame(width: screen.width)
                         .padding(.top, screen.width / -3)
                         .zIndex(-1)
-                    MoviePreviewRow(movies: exampleMovies)
+                    MoviePreviewRow(
+                        movies: exampleMovies,
+                        showPreviewFullScreen: $showPreviewFullScreen,
+                        previewStartingIndex: $previewStartingIndex)
                     
                     HomeStack(viewModel: viewModel,
                               topRowSelection: topRowSelection,
                               selectedGenre: homeGenre, // No need to pass binding because of 1-way change
-                              movieDetailToShow: $movieDetailToShow)
+                              movieDetailToShow: $movieDetailToShow,
+                              showPreviewFullScreen: $showPreviewFullScreen,
+                              previewStartingIndex: $previewStartingIndex)
                 }
                 .foregroundColor(.white)
             }
@@ -133,7 +141,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(showPreviewFullScreen: .constant(false), previewStartingIndex: .constant(0))
     }
 }
 
