@@ -57,8 +57,8 @@ struct ComingSoonView: View {
                 }
                 .foregroundColor(.white)
                 
-                Text("\(scrollOffset)")
-                    .background(Color.red)
+//                Text("\(scrollOffset)")
+//                    .background(Color.red)
                 
                 // empty navigation trigger
                 NavigationLink(
